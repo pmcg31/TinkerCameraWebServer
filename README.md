@@ -10,11 +10,13 @@
   ESP32 CameraWebServer example sketch<br><i>made more tinker friendly</i>.
 </h1>
 
-This is the CameraWebServer example sketch that comes with the ESP32 framework for the IDE. However, this sketch comes with some, well, sketchy stuff.
+This is the CameraWebServer example sketch that comes with the ESP32 framework for the IDE. However, this sketch is a bit, well, _sketchy_.
 
 The main html pages are stored in a header file, which would be bad enough, except it is written out in array initializer notation, one agonizing byte at a time. Ridiculous? What if I told you it was gzipped, too? Now how much would you pay?
 
-So, I converted the header file mess into files, and then unzipped them. They now reside in the `data` folder as `index_ov2640.html` and `index_ov3660.html` and will be uploaded to the board's SPIFFS filesystem. The proper one will be selected and served depending on the camera model. Mine was an OV2640.
+And, yes, the browser knows how to unzip stuff. That's not the point. My editor don't do gzip, yo.
+
+So, I converted the header file mess into files, and then unzipped them (call me stubborn). They now reside in the `data` folder as `index_ov2640.html` and `index_ov3660.html` and will be uploaded to the board's SPIFFS filesystem. The proper one will be selected and served depending on the camera model. Mine was an OV2640.
 
 ## ⚙️ Gear you need
 
